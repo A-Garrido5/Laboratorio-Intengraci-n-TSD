@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tick Tack Toe</title>
+  <meta charset="UTF-8" />
+  <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/cover.css" rel="stylesheet">
+  
+    <!-- Librerias necesarias para el funcionamiento de la página -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    
+  <script>
+
+
+    $(function() {
+      $('#crear').click(function() {
+
+
+        
+        document.getElementById('name').style.visibility = "visible";
+        document.getElementById('ingname').style.visibility = "visible";
+        document.getElementById('create').style.visibility = "visible";
+        
+
+        
+
+      });
+      
+    });
+
+
+    $(function(){
+       $('#create').click(function() {
+
+          window.location="crearsala/jugador/"+document.getElementById('name').value;
+          window.location="/";
+      });          
+    });
+
+    $(function(){
+       $('#unirse').click(function() {
+
+          document.getElementById('otroname').style.visibility = "visible";
+          document.getElementById('newname').style.visibility = "visible";
+          document.getElementById('join').style.visibility = "visible";
+
+          document.getElementById('ide').style.visibility = "visible";
+          document.getElementById('ingid').style.visibility = "visible";
+
+      });          
+    });
+
+    $(function(){
+       $('#join').click(function() {
+
+          window.location="/unirseasala/"+document.getElementById('ide').value+"/jugador/"+document.getElementById('otroname').value;
+          window.location="/";
+      });          
+    });
+    
+
+    $(function(){
+       $('#ir').click(function() {
+
+          document.getElementById('go').style.visibility = "visible";
+          document.getElementById('ingid2').style.visibility = "visible";
+          document.getElementById('otroid').style.visibility = "visible";
+      });          
+    });
+       
+    $(function(){
+       $('#go').click(function() {
+          window.open('/tablero?id='+document.getElementById('otroid').value);
+          
+         
+      });          
+    }); 
+
+      // Send text to the server when the Send button is clicked
+      
+  </script>
+</head>
+<body>
+
+  <br />
+  <br />
+  
+
+  <div class="center">
+
+
+    </div>
+
+
+
+  <input id="crear" type="button" value="Crear nueva sala" /><br /><br />
+  
+  <label style="visibility:hidden" id="ingname">Ingresa tu nombre :</label>
+  <input style="visibility:hidden" id="name" type="text">&nbsp;<br /><br />
+  <input style="visibility:hidden" id="create" type="button" value="Crear" /><br /><br />
+
+
+  <input id="unirse" type="button" value="Unirse a una sala" />&nbsp;<br /><br />
+  <label style="visibility:hidden" id="newname">Ingresa tu nombre :</label>
+  <input style="visibility:hidden" id="otroname" type="text">&nbsp;<br /><br />
+  <label style="visibility:hidden" id="ingid">Ingresa el ID de la sala :</label>
+  <input style="visibility:hidden" id="ide" type="text">&nbsp;<br /><br />
+  <input style="visibility:hidden" id="join" type="button" value="Unirse" /><br /><br />
+
+  <input id="ir" type="button" value="Ir a una sala" />&nbsp;<br /><br />
+  <label style="visibility:hidden" id="ingid2">Ingresa el ID de la sala :</label>
+  <input style="visibility:hidden" id="otroid" type="text">&nbsp;<br /><br />
+  <input style="visibility:hidden" id="go" type="button" value="Ir" /><br /><br />
+
+  
+  
+  <br />
+  
+</body>
+</html>
